@@ -24,6 +24,11 @@ export class ProductListComponent implements OnInit{
       this.filteredProducts = this.listFilter ? this.filterSearch(this.listFilter) : this.products;
   }
 
+  onRatingClicked(message: string): void {
+
+    this.pageTitle = message; 
+  }
+
 
   filteredProducts: IProduct[]; 
   products: IProduct[] = [{
